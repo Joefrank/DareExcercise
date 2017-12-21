@@ -197,6 +197,7 @@ FakesAssemblies/
 **/App_Data/Logs/
 **/App_Data/[Pp]review/
 **/App_Data/TEMP/
+**/App_Data/TEMP/
 Cached/
 
 **/Media/
@@ -209,6 +210,5 @@ Cached/
 !**/App_Data/[Pp]ackages/
 !**/[Uu]mbraco/[Dd]eveloper/[Pp]ackages
 !**/[Pp]ackages/[Dd][Ll][Ll] [Bb]ackup/
-/RAFBF/App_Data
-/RAFBF/App_Data
+
 *.dat
