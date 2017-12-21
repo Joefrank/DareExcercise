@@ -1,0 +1,21 @@
+﻿@using System.Configuration
+@model IEnumerable<IPublishedContent>
+
+@{
+    var appName = ConfigurationManager.AppSettings["ApplicationName"];
+}
+
+<div class="top-menu">
+    <ul>
+        <li>
+            <a href="/">@appName</a>
+        </li>
+        @foreach (var content in Model)
+        {
+            <li>
+                <a href="@content.Url">@content.Name</a>
+            </li>
+        }
+    </ul>
+</div>
+

@@ -1,0 +1,36 @@
+﻿
+@inherits  UmbracoViewPage<DateExcercise.web.Models.HomeRenderModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var page = Model.ContentModel;
+}
+
+@section HeadExtraCss{
+    <style type="text/css">
+        body{
+            background-image: url('@page.HomeBackgroundImg.Url');
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
+}
+<div class="container midslim">
+    <h1>@page.PageTitle</h1>
+
+    <div>
+        @Html.Raw(page.PageMainText)
+    </div>
+
+    <h2>@Html.Raw(page.HomeSignature)</h2>
+    
+
+    <h3>Special effect</h3>
+    <p>
+        @Html.Raw(Model.SpecialEffect)
+    </p>
+
+</div>
+

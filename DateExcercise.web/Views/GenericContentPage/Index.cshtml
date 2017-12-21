@@ -1,0 +1,33 @@
+﻿
+@inherits UmbracoViewPage<DateExcercise.web.Models.GenericContentPageRenderModel>
+
+@{
+    ViewBag.Title = "My First Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var myModel = Model.ContentModel;
+}
+
+@section HeadExtraCss{
+    <style type="text/css">
+        body{
+            background-color: @myModel.BGcolor;
+        }
+    </style>
+}
+
+<div class="container midslim">
+    <h1>@myModel.PageTitle</h1>
+
+    <div>
+        @Html.Raw(myModel.PageMainText)
+    </div>
+
+    <h2>@Html.Raw(myModel.SecondInputText)</h2>
+    
+    <h3>Special content effect</h3>
+    <p>
+        @Html.Raw(Model.SpecialContentEffect)
+    </p>
+</div>
+
